@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Latihan Class dan Objek </title>
+    </head>
+    <body> 
+        <form onsubmit="return false">
+            <p>tas1 :<input type="text" id="eiger" placeholder ="eiger"></p>
+            <p>tas2 :<input type="text" id="celvin" placeholder="celvin"></p>
+            <p>tas3 :<input type="text" id="ozuko" placeholder="ozuko"></p>
+            <button onclick="sles()">
+                Klik Disini  
+            </button>
+        </form>
+    
+        
+        <script>
+            function sles() {
+                let p = document.getElementById("eiger").value;
+                let q = document.getElementById("celvin").value;
+                let r = document.getElementById("ozuko").value;
+
+
+                class tas {
+                
+                bahan;
+                warna;
+                eiger;
+                celvin;
+                ozuko;
+        
+                constructor(eiger, celvin, ozuko, bahan, warna) {
+                    this.bahan = "gor";
+                    this.warna = "biru";
+                    this.bahan1 = "taslon";
+                    this.warna1 = "merah";
+                    this.bahan2 = "parasut";
+                    this.warna2 = "hijau";
+                    this.eiger = p;
+                    this.celvin = q;
+                    this.ozuko = r; 
+
+                }
+        
+                jual(eiger) {
+                    return "tas " + eiger + "  ini sudah terjual";
+                }
+                kegunaan(celvin){
+                    return "tas " + celvin + "  digunakan untuk menyimpan barang";
+                }
+                beli(ozuko){
+                    return "tas " + ozuko + "  ini akan dibeli";
+                }
+
+                
+            }
+        
+            let jenistas1 = new tas;
+            let jenistas2 = new tas;
+            let jenistas3= new tas;
+
+            console.log(jenistas1.jual(p));
+            console.log(jenistas1.bahan);
+            console.log(jenistas1.warna);
+            
+            console.log(jenistas2.kegunaan(q));
+            console.log(jenistas2.bahan1);
+            console.log(jenistas2.warna1);
+            
+            console.log(jenistas3.beli(r));
+            console.log(jenistas3.bahan2);
+            console.log(jenistas3.warna2);
+            
+        
+        }
+        </script>
+    </body>
+</html>
